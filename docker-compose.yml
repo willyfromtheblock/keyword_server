@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  keyword_server:
+    image: 'keyword_server'
+    environment: 
+      - CMC_API_KEY=""
+      - MYSQL_HOST=""
+      - MYSQL_DB=""
+      - MYSQL_PORT=""
+      - MYSQL_USER=""
+      - MYSQL_PASSWORD=""
+    restart: always
