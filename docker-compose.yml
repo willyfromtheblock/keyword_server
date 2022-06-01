@@ -9,4 +9,5 @@ services:
       - MYSQL_PORT=""
       - MYSQL_USER=""
       - MYSQL_PASSWORD=""
+      - PORT=8080
     restart: always

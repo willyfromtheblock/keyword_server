@@ -67,7 +67,7 @@ Future<List<String>> getTopFiveKeyWords(String botId) async {
 
   var resultList = <String>[];
   var result = await conn.execute(
-      "SELECT keyword, COUNT(keyword) FROM follows WHERE bot = $botId AND (keyword IS NOT NULL AND keyword != '') GROUP BY keyword ORDER BY Count(keyword) DESC LIMIT 5");
+      "SELECT keyword, COUNT(keyword) FROM follows WHERE followedBack = '1' AND bot = $botId AND (keyword IS NOT NULL AND keyword != '') GROUP BY keyword ORDER BY Count(keyword) DESC LIMIT 5");
   for (final row in result.rows) {
     resultList.add(row.colByName('keyword')!);
   }
