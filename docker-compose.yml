@@ -1,7 +1,10 @@
 version: '3.1'
 services:
   keyword_server:
-    image: 'keyword_server'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: keyword_server
     environment: 
       - CMC_API_KEY=""
       - MYSQL_HOST=""
