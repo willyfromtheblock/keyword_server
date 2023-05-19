@@ -71,5 +71,8 @@ Future<List<String>> getTopFiveKeyWords(String botId) async {
   for (final row in result.rows) {
     resultList.add(row.colByName('keyword')!);
   }
+
+  await conn.close();
+
   return resultList;
 }

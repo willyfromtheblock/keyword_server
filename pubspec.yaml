@@ -9,7 +9,7 @@ environment:
 dependencies:
   args: ^2.0.0
   http: ^0.13.4
-  mysql_client: ^0.0.19
+  mysql_client: ^0.0.27
   shelf: ^1.1.0
   shelf_router: ^1.0.0
 
